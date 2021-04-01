@@ -1,1 +1,21 @@
 ## PARTE 1
+![img_2.png](img_2.png)
+
+Evidencias del test circle
+
+![img_4.png](img_4.png)
+
+Evidencias del test rectangle
+
+![img_5.png](img_5.png)
+
+Evidencias del test square
+
+![img_6.png](img_6.png)
+
+Evidencias del test triangle
+
+![img_7.png](img_7.png)
+
+## PARTE 2
+![img_3.png](img_3.png)

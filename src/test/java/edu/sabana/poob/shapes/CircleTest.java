@@ -50,10 +50,10 @@ public class CircleTest {
     @Test
     public void shouldPrintCircle() {
 
-        assertEquals("This is a Circle with color NONE and radius 10", c1.toString());
+        assertEquals("This is a Circle with color NONE and radius 10.0", c1.toString());
         assertEquals("This is a Circle with color NONE and radius 14.5", c2.toString());
         assertEquals("This is a Circle with color red and radius 23.5", c3.toString());
-        assertEquals("This is a Circle with color NONE and radius 1", c4.toString());
+        assertEquals("This is a Circle with color NONE and radius 1.0", c4.toString());
     }
 
 }
