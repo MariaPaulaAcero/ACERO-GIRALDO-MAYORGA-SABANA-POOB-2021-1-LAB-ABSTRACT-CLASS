@@ -16,7 +16,8 @@ public class Check {
         return amount;
     }
 
-    public LocalDate getExpirationDate() {
+    public static LocalDate getExpirationDate() {
+        LocalDate expirationDate =LocalDate.now().plusMonths(1);
         return expirationDate;
     }
 }

@@ -11,7 +11,6 @@ public class CheckingTest {
     @Test
     public void shouldGetDepositDiscount() {
         Checking account = new Checking();
-
         assertTrue(Double.compare(5000, account.getDepositDiscount()) == 0);
     }
 

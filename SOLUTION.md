@@ -19,3 +19,14 @@ Evidencias del test triangle
 
 ## PARTE 2
 ![img_3.png](img_3.png)
+
+Evidencia
+![img_8.png](img_8.png)
+
+## PARTE 3
+
+## PARTE 4
+
+![img_11.png](img_11.png)
+
+## PARTE 5

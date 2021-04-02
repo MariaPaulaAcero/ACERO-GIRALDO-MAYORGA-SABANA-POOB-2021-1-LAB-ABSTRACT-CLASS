@@ -32,6 +32,7 @@ public abstract class BankAccount {
      * @return Si la operación fue exitosa.
      */
     public boolean deposit(double amount) {
+
         return false;
     }
 
@@ -47,6 +48,8 @@ public abstract class BankAccount {
      * @return Si la operación fue exitosa.
      */
     public boolean withdraw(double amount) {
+        withdraw(700000*4/10000);
+        System.out.println(amount);
         return false;
     }
 
