@@ -23,12 +23,10 @@ public class Savings extends BankAccount {
      * @return el porcentaje depositado en la cuenta.
      */
     public double depositMontlyInterest(){
-        double depositv=1000000;
+        double depositInitial=10000;
         double deposit;
-        double depositf;
-        deposit=depositv*(1+ANNUAL_INTEREST_RATE/12)+(12*1);
-        depositf=deposit-depositv;
-        System.out.println(depositf);
-        return depositf;
+        deposit=depositInitial-(depositInitial*(ANNUAL_INTEREST_RATE/12));
+        System.out.println(deposit);
+        return deposit;
     }
 }

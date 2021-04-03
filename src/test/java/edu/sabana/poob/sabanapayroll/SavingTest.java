@@ -18,7 +18,7 @@ public class SavingTest {
     @Test
     public void shouldGetdepositMontlyInterest() {
         Savings account = new Savings();
-        assertTrue(Double.compare(845.3333333332557, account.depositMontlyInterest())==0);
+        assertTrue(Double.compare(9991.666666666666, account.depositMontlyInterest())==0);
     }
     @Test
 

@@ -5,6 +5,7 @@ public abstract class BankAccount {
     public static final int TAX_4_1000 = 4;
 
     private double balance;
+    public double deposit;
 
     /**
      * Inicializa una cuenta.
@@ -32,7 +33,6 @@ public abstract class BankAccount {
      * @return Si la operación fue exitosa.
      */
     public boolean deposit(double amount) {
-
         return false;
     }
 
@@ -48,24 +48,30 @@ public abstract class BankAccount {
      * @return Si la operación fue exitosa.
      */
     public boolean withdraw(double amount) {
-        withdraw(700000*4/10000);
-        System.out.println(amount);
+        double finalBalance;
+        if(amount!= 0){
+            balance=(balance-amount);
+            finalBalance=TAX_4_1000-amount;
+            System.out.println(balance+finalBalance);
+        }
         return false;
     }
+
 
     /**
      * Devuelve el balance de la cuenta
      *
-     * @return El balabce
+     * @return
      */
     public double getBalance() {
         return balance;
     }
 
     private void setBalance(double balance) throws Exception {
-        if (balance < 0)
+        if (balance < 0) {
             throw new Exception("Error en el deposito");
-
+        }
         this.balance = balance;
+        System.out.println(this.balance);
     }
 }

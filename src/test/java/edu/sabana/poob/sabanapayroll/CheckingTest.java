@@ -18,7 +18,6 @@ public class CheckingTest {
     public void shouldDepositAmount() {
         Checking account = new Checking();
         boolean result = account.deposit(10000);
-
         assertTrue(result);
         assertTrue(Double.compare(5000, account.getBalance()) == 0);
     }
