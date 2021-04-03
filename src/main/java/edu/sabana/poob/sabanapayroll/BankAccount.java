@@ -33,7 +33,17 @@ public abstract class BankAccount {
      * @return Si la operación fue exitosa.
      */
     public boolean deposit(double amount) {
-        return false;
+        boolean result =false;
+        double newBalance;
+        if(amount > getDepositDiscount()){
+            newBalance = amount-getDepositDiscount();
+            this.balance+=newBalance;
+            result = true;
+        }
+        if(amount < getDepositDiscount()){
+            result = false;
+        }
+        return result;
     }
 
     /**

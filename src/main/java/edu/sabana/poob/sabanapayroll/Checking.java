@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public class Checking extends BankAccount {
 
     public final static double DEPOSIT_DISCOUNT=5000;
+    private double balance;
 
     @Override
     public double getDepositDiscount() {
@@ -15,12 +16,7 @@ public class Checking extends BankAccount {
         }
         return deposit;
     }
-    public double Balance() {
 
-        double balance ;
-        balance=deposit++;
-        return balance;
-    }
 
     /**
      * Calcula el porcentaje de intereses y los deposita en la cuenta sin ningñun descuento.
@@ -30,15 +26,14 @@ public class Checking extends BankAccount {
 
     public boolean processCheck(Check check) {
         boolean result = false;
-        double deposit;
-        double balance=0;
+        double newBalance;
         LocalDate currentDate = LocalDate.now();
-        if(currentDate.isBefore(LocalDate.now().plusMonths(1))){
+        if(currentDate.isBefore(Check.getExpirationDate())){
             if(check.getAmount() > getDepositDiscount()){
-                deposit= check.getAmount();
-                balance +=deposit-getDepositDiscount();
+                newBalance =check.getAmount() -getDepositDiscount();
+                balance += newBalance;
                 result = true;
-                System.out.println(balance);
+
             }
         }
         return result;
