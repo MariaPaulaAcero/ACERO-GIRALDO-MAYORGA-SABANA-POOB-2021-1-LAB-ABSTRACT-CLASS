@@ -1,5 +1,4 @@
 package edu.sabana.poob.sabanapayroll;
-
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -11,6 +10,7 @@ public class CheckingTest {
     @Test
     public void shouldGetDepositDiscount() {
         Checking account = new Checking();
+
         assertTrue(Double.compare(5000, account.getDepositDiscount()) == 0);
     }
 
@@ -18,6 +18,7 @@ public class CheckingTest {
     public void shouldDepositAmount() {
         Checking account = new Checking();
         boolean result = account.deposit(10000);
+
         assertTrue(result);
         assertTrue(Double.compare(5000, account.getBalance()) == 0);
     }
@@ -37,7 +38,7 @@ public class CheckingTest {
         Check check = new Check(10000, LocalDate.now().plusMonths(1));
 
         assertTrue(account.processCheck(check));
-        assertTrue(Double.compare(5000, account.getBalance()) == 0);// esta dando cero
+        assertTrue(Double.compare(5000, account.getBalance()) == 0);
     }
 
     @Test

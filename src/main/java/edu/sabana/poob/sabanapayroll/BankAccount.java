@@ -6,7 +6,7 @@ public abstract class BankAccount {
 
     public static final int TAX_4_1000 = 4;
 
-    private double balance;
+    double balance;
 
 
     /**
@@ -35,11 +35,11 @@ public abstract class BankAccount {
      * @return Si la operación fue exitosa.
      */
     public boolean deposit(double amount) {
-        boolean result =false;
+        boolean result = false;
         double newBalance;
         if(amount > getDepositDiscount()){
-            newBalance = amount-getDepositDiscount();
-            this.balance+=newBalance;
+            newBalance = amount - getDepositDiscount();
+            this.balance += newBalance;
             result = true;
         }
         if(amount < getDepositDiscount()){
@@ -47,7 +47,6 @@ public abstract class BankAccount {
         }
         return result;
     }
-
     /**
      * Realizar un retiro.
      * <br><br>
