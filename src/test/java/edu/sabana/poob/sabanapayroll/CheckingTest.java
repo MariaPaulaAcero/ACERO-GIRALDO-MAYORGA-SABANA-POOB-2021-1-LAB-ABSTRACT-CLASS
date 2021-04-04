@@ -37,7 +37,7 @@ public class CheckingTest {
         Check check = new Check(10000, LocalDate.now().plusMonths(1));
 
         assertTrue(account.processCheck(check));
-        assertTrue(Double.compare(5000, account.getBalance()) == 0);
+        assertTrue(Double.compare(5000, account.getBalance()) == 0);// esta dando cero
     }
 
     @Test

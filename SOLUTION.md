@@ -24,9 +24,18 @@ Evidencia
 ![img_8.png](img_8.png)
 
 ## PARTE 3
+Evidencia de las pruebas del CheckingTest
+
+
+Evidencia de las pruebas del SavingTest
+![img_12.png](img_12.png)
+
+Evidencia de las pruebas del SabanaNominaTest
+![img_13.png](img_13.png)
 
 ## PARTE 4
 
-![img_11.png](img_11.png)
+
 
 ## PARTE 5
+![img_11.png](img_11.png)

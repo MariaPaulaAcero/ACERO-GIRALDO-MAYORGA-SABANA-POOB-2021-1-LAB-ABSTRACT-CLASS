@@ -1,9 +1,6 @@
 package edu.sabana.poob.sabanapayroll;
 
 import org.junit.jupiter.api.Test;
-
-import java.time.LocalDate;
-
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -25,9 +22,8 @@ public class SavingTest {
     public void shouldDepositAmount() {
         Savings account = new Savings();
         boolean result = account.deposit(10000);
-
         assertTrue(result);
-        assertTrue(Double.compare(5000, account.getBalance()) == 0);
+        assertTrue(Double.compare(2000, account.getBalance()) == 0);//beria dar  8000
     }
 
     @Test

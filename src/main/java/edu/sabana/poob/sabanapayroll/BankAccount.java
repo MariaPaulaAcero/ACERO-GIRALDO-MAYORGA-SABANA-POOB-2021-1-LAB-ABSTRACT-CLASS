@@ -1,11 +1,13 @@
 package edu.sabana.poob.sabanapayroll;
 
+
+
 public abstract class BankAccount {
 
     public static final int TAX_4_1000 = 4;
 
     private double balance;
-    public double deposit;
+
 
     /**
      * Inicializa una cuenta.
@@ -57,14 +59,28 @@ public abstract class BankAccount {
      * @param amount El monto a retirar.
      * @return Si la operación fue exitosa.
      */
-    public boolean withdraw(double amount) {
+    public boolean withdraw(double amount) {// modifique el boolean por el double
+        boolean result =false;
+        double newBalance = 0;
         double finalBalance;
-        if(amount!= 0){
-            balance=(balance-amount);
-            finalBalance=TAX_4_1000-amount;
-            System.out.println(balance+finalBalance);
+        finalBalance= amount+TAX_4_1000;
+        if (finalBalance<this.balance){
+            System.err.println("Insufficient funds");
+            result = true;
         }
-        return false;
+        if (finalBalance>this.balance){
+
+            newBalance=(this.balance-amount)-TAX_4_1000;
+            System.out.println(newBalance);
+            result = true;
+        }
+       /* if(amount!= 0){
+            newBalance=(balance-amount)-TAX_4_1000;
+            System.out.println(newBalance);
+        }
+        */
+        return result;
+
     }
 
 
