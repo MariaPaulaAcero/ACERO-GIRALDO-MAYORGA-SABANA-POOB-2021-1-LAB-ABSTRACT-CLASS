@@ -9,7 +9,12 @@ public class Savings extends BankAccount {
 
     @Override
     public double getDepositDiscount() {
-        return DEPOSIT_DISCOUNT;
+        double depositV=10000;
+        double deposit=0;
+        if(depositV>DEPOSIT_DISCOUNT){
+            deposit =depositV-DEPOSIT_DISCOUNT;
+        }
+        return deposit;
     }
 
     /**

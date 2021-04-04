@@ -10,7 +10,7 @@ public class SavingTest {
     @Test
     public void shouldGetDepositDiscount() {
         Savings account = new Savings();
-        assertTrue(Double.compare(2000, account.getDepositDiscount()) == 0);
+        assertTrue(Double.compare(8000, account.getDepositDiscount()) == 0);
     }
     @Test
     public void shouldGetdepositMontlyInterest() {
