@@ -28,7 +28,7 @@ Evidencia de las pruebas del CheckingTest
 ![img_14.png](img_14.png)
 
 Evidencia de las pruebas del SavingTest
-![img_15.png](img_15.png)
+![img_16.png](img_16.png)
 
 Evidencia de las pruebas del SabanaNominaTest
 ![img_13.png](img_13.png)
