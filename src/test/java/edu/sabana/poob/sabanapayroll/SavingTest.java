@@ -10,7 +10,7 @@ public class SavingTest {
     @Test
     public void shouldGetDepositDiscount() {
         Savings account = new Savings();
-        assertTrue(Double.compare(8000, account.getDepositDiscount()) == 0);
+        assertTrue(Double.compare(2000, account.getDepositDiscount()) == 0);
     }
     @Test
     public void shouldGetdepositMontlyInterest() {
@@ -23,15 +23,15 @@ public class SavingTest {
         Savings account = new Savings();
         boolean result = account.deposit(10000);
         assertTrue(result);
-        assertTrue(Double.compare(2000, account.getBalance()) == 0);//beria dar  8000
+        assertTrue(Double.compare(8000, account.getBalance()) == 0);//beria dar  8000
     }
 
     @Test
     public void shouldNotDepositAmount() {
         Savings account = new Savings();
 
-        assertFalse(account.deposit(4000));
-        assertFalse(account.deposit(5000));
+        assertFalse(account.deposit(2000));
+        assertFalse(account.deposit(1000));
         assertTrue(Double.compare(0, account.getBalance()) == 0);
     }
 }

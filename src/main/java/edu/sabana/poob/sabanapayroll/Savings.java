@@ -9,12 +9,7 @@ public class Savings extends BankAccount {
 
     @Override
     public double getDepositDiscount() {
-        double depositV=10000;
-        double deposit=0;
-        if(depositV>DEPOSIT_DISCOUNT){
-            deposit =depositV-DEPOSIT_DISCOUNT;
-        }
-        return deposit;
+        return DEPOSIT_DISCOUNT;
     }
 
     /**
@@ -25,7 +20,9 @@ public class Savings extends BankAccount {
     public double depositMontlyInterest(){
         double depositInitial=10000;
         double deposit;
+        double newBalance=0;
         deposit=depositInitial-(depositInitial*(ANNUAL_INTEREST_RATE/12));
+        balance += newBalance;
         System.out.println(deposit);
         return deposit;
     }
