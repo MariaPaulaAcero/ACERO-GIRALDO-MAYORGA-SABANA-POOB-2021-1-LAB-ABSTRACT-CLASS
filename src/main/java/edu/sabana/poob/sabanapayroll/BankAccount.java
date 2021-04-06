@@ -93,10 +93,9 @@ public abstract class BankAccount {
     }
 
     private void setBalance(double balance) throws Exception {
-        if (balance < 0) {
+        if (balance < 0)
             throw new Exception("Error en el deposito");
-        }
+
         this.balance = balance;
-        System.out.println(this.balance);
     }
 }

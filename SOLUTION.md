@@ -34,8 +34,8 @@ Evidencia de las pruebas del SabanaNominaTest
 ![img_13.png](img_13.png)
 
 ## PARTE 4
-
-
+Evidencias de la prueba 
+![img_17.png](img_17.png)
 
 ## PARTE 5
 ![img_11.png](img_11.png)

@@ -4,10 +4,12 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SabanaNominaTest {
 
@@ -32,6 +34,10 @@ public class SabanaNominaTest {
     private static EmployeeBySalary employeeBySalary3;
     private static EmployeeByHours employeeByHours3;
     private static EmployeeByCommission employeeByCommission3;
+    private static Employee employee1;
+    private static Employee employee2;
+    private static Employee employee3;
+
 
 
     @BeforeAll
@@ -69,6 +75,8 @@ public class SabanaNominaTest {
         SalesEmployees.add(employeeBySalary3);
         SalesEmployees.add(employeeByHours3);
         SalesEmployees.add(employeeByCommission3);
+
+
 
     }
 
@@ -114,7 +122,6 @@ public class SabanaNominaTest {
 
     }
 
-
     @Test
     @DisplayName("GIVEN a employees WHEN toString THEN get right print format")
     public void shouldPrintEmployees(){
@@ -126,5 +133,25 @@ public class SabanaNominaTest {
         sabanaPayroll = new SabanaPayroll(employees, departments);
         sabanaPayroll.printPayroll();
 
+    }
+
+    @Test
+    @DisplayName("GIVEN a employee WHEN deposit to account THEN right deposit to account")
+    public void shouldDepositToEmployee(){
+        Check check = new Check(80000, LocalDate.now().plusMonths(1));
+        BankAccount account = new Checking();
+        employee1 = new Employee("Laura", "Pulido", account);
+        assertTrue(employee1.depositToEmployee(account, check, 0 ));
+    }
+
+    @Test
+    @DisplayName("GIVEN a employee WHEN calculate balance THEN get right balance")
+    public void shouldCalculateEmployeeBalance(){
+        Check check = new Check(50000, LocalDate.now().plusMonths(2));
+        BankAccount account = new Checking();
+        double amount = 0;
+        employee2 = new Employee("Javier", "Estrada", account);
+        assertTrue(employee2.depositToEmployee(account, check, 0 ));
+        assertEquals(90000, employee2.calculateEmployeeBalance(account, check, amount));
     }
 }
